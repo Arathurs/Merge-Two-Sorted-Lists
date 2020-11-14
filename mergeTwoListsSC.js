@@ -3,27 +3,19 @@ var mergeTwoLists = function(l1, l2) {
         q = l1,
         v = l2,
         curr = dummyHead;
-    
     while (q !== null || v !== null) {
-        if (q && v && q.val !== null && v.val !== null) {
-            if (q.val <= v.val) {
-                curr.next = new ListNode(q.val);
-                curr = curr.next;
-                q = q.next;
-            } else {
-                curr.next = new ListNode(v.val);
-                curr = curr.next;
-                v = v.next;  
-            }    
-        } else if (q && q.val !== null) {
+        if (
+            (q && v && q.val !== null && v.val !== null && q.val <= v.val)
+         ||  q && q.val !== null && (!v || v.val === null)
+        ) {
             curr.next = new ListNode(q.val);
             curr = curr.next;
-            q = q.next;
-        } else if (v && v.val !== null) {
+             q = q.next;
+        } else {
             curr.next = new ListNode(v.val);
             curr = curr.next;
-            v = v.next;
-        }
+            v = v.next;  
+        }    
             
     }
     return dummyHead.next;
