@@ -2,10 +2,6 @@
 
 Merge two sorted linked lists and return it as a new sorted list. The new list should be made by splicing together the nodes of the first two lists.
 
-#### Solutions - To Be Completed!!!!
-
-``This solution uses an iterative approach, beating 99% of all previous Leetcode submissions.``
-
 ##### Example 1:
 ```
 Input: l1 = [1,2,4], l2 = [1,3,4]
@@ -29,3 +25,8 @@ Output: [0]
 - The number of nodes in both lists is in the range `[0, 50]`.
 - `-100 <= Node.val <= 100`
 - Both `l1` and `l2` are sorted in **non-decreasing** order.
+
+#### Solutions 
+
+##### Solution 1:
+``The JavaScript solution in mergeTwoListsIBF.js uses an iterative bread-first approach, beating 96.9% of all previous Leetcode submissions.``
