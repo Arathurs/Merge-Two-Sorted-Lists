@@ -1,22 +1,9 @@
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} l1
- * @param {ListNode} l2
- * @return {ListNode}
- */
-/* This solution beats 96.90% of JavaScript online submissions for
-   Merge Two Sorted Lists on LeetCode */
 var mergeTwoLists = function(l1, l2) {
     let dummyHead = new ListNode(0),
         q = l1,
         v = l2,
         curr = dummyHead;
+    
     while (q !== null || v !== null) {
         if (q && v && q.val !== null && v.val !== null) {
             if (q.val <= v.val) {
@@ -36,7 +23,8 @@ var mergeTwoLists = function(l1, l2) {
             curr.next = new ListNode(v.val);
             curr = curr.next;
             v = v.next;
-        }    
+        }
+            
     }
     return dummyHead.next;
 };
