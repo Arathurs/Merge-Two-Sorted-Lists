@@ -29,7 +29,7 @@ Output: [0]
 #### Solutions 
 
 ##### Solution 1:
-``The JavaScript solution in mergeTwoListsSC.js uses an iterative bread-first approach, beating 96.9% of all previous Leetcode submissions.``
+``The highest performing JavaScript solution in 'mergeTwoLists'.js, uses an iterative bread-first approach, beating 99.3% of all previous Leetcode submissions.``
 
 ##### Solution 2:
 ``The JavaScript solution in mergeTwoListsIBF.js uses an iterative bread-first approach, beating 96.9% of all previous Leetcode submissions.``
