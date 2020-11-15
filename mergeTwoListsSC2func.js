@@ -25,9 +25,9 @@ var mergeTwoLists = function(l1, l2) {
     return dummyHead.next;
 };
 
-function attachNode(curr, value) {
-    curr.next = new ListNode(value.val);
-    curr = curr.next;
+function attachNode(current, value) {
+    current.next = new ListNode(value.val);
+    current = current.next;
     value = value.next;
     return curr;
 }

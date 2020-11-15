@@ -30,3 +30,5 @@ Output: [0]
 
 ##### Solution 1:
 ``The JavaScript solution in mergeTwoListsIBF.js uses an iterative bread-first approach, beating 96.9% of all previous Leetcode submissions.``
+
+##### Solution 2:

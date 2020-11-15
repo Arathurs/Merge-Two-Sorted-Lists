@@ -32,8 +32,7 @@ var mergeTwoLists = function(l1, l2) {
             curr.next = new ListNode(v.val);
             curr = curr.next;
             v = v.next;
-        }    
-            
+        }      
     }
     return dummyHead.next;
 };
