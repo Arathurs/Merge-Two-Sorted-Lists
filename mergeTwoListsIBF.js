@@ -12,31 +12,29 @@
  */
 /* This solution beats 96.90% of JavaScript online submissions for
    Merge Two Sorted Lists on LeetCode */
-var mergeTwoLists = function(l1, l2) {
+   var mergeTwoLists = function(l1, l2) {
     let dummyHead = new ListNode(0),
-        q = l1,
-        v = l2,
         curr = dummyHead;
-    while (q !== null || v !== null) {
-        if (q && v && q.val !== null && v.val !== null) {
-            if (q.val <= v.val) {
-                curr.next = new ListNode(q.val);
-                curr = curr.next;
-                q = q.next;
+    while (l1 || l2) {
+        if (l1 && l2 && l1.val !== null && l1.val !== null) {
+            if (l1.val > l2.val) {
+                curr.next = l2;
+                l2 = l2.next;
+                
             } else {
-                curr.next = new ListNode(v.val);
-                curr = curr.next;
-                v = v.next;  
-            }    
-        } else if (q && q.val !== null) {
-            curr.next = new ListNode(q.val);
+                curr.next = l1;
+                l1 = l1.next;  
+            }
             curr = curr.next;
-            q = q.next;
-        } else if (v && v.val !== null) {
-            curr.next = new ListNode(v.val);
-            curr = curr.next;
-            v = v.next;
-        }    
+            continue;
+        } 
+        
+        if (l1 && l1.val !== null) {
+            curr.next = l1
+        } else {
+            curr.next = l2;
+        }
+        break;
     }
     return dummyHead.next;
 };
