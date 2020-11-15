@@ -29,11 +29,7 @@
             continue;
         } 
         
-        if (l1 && l1.val !== null) {
-            curr.next = l1
-        } else {
-            curr.next = l2;
-        }
+        curr.next = l1 || l2;
         break;
     }
     return dummyHead.next;
